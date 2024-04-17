@@ -1,7 +1,7 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import Spreadsheet from 'react-spreadsheet';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   
@@ -15,12 +15,14 @@ function App() {
         <BrowserRouter>
         <div className="App">
           <Navbar />
+          <Routes>
         <Route path="/" element={<Spreadsheet
         className='spreadsheet'
           data={data}
           columnLabels={columnLabels}
           rowLabels={rowLabels}
         />}/>
+        </Routes>
         
     </div>
     </BrowserRouter>
